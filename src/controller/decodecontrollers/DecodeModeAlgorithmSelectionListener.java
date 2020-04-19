@@ -20,6 +20,5 @@ public class DecodeModeAlgorithmSelectionListener implements ItemListener {
         JComboBox comboBox = (JComboBox) e.getSource();
         Object selectedItem = comboBox.getSelectedItem();
         model.setAlgorithmType((String)selectedItem);
-        System.out.println(model.getAlgorithmType());
     }
 }

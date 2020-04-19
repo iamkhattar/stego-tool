@@ -17,6 +17,6 @@ public class EncodeModeAlgorithmSelectionListener implements ItemListener {
     public void itemStateChanged(ItemEvent e) {
         JComboBox comboBox = (JComboBox) e.getSource();
         Object selectedItem = comboBox.getSelectedItem();
-        System.out.println(selectedItem);
+        model.setAlgorithmType((String)selectedItem);
     }
 }
