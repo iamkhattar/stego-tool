@@ -1,5 +1,6 @@
 package view;
 
+import controller.decodecontrollers.DecodeModeMenuListener;
 import controller.encodecontrollers.EncodeModeMenuListener;
 import model.StegoModel;
 
@@ -87,7 +88,7 @@ public class DecodeView extends JPanel implements View {
 
         JMenuItem menuItem = new JMenuItem("Switch to Encode Mode");
         menu.add(menuItem);
-        menuItem.addActionListener(new EncodeModeMenuListener(model,view));
+        menuItem.addActionListener(new DecodeModeMenuListener(model,view));
 
 
         return menuBar;
