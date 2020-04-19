@@ -52,7 +52,7 @@ public class Read {
         return new File(path).exists();
     }
 
-    /** Converting arry of Bytes to an array of Binary Strings
+    /** Converting array of Bytes to an array of Binary Strings
      *
      * @param byt gets the array of bytes that are being converted
      * @return returns the bytes in binary string form
@@ -65,5 +65,18 @@ public class Read {
             binaryString[i] = String.format("%8s", Integer.toBinaryString(currByt & 0xFF)).replace(' ', '0');
         }
         return binaryString;
+    }
+
+    /** converting array of Binary Strings to an array Bytes
+     *
+     * @param binString the array of binary strings that are being converted into bytes
+     * @return returns an array of binary strings
+     */
+    public byte[] convertBinaryStringToByte(String[] binString){
+        byte[] bytArr = new byte[binString.length];
+        for(int i =0; i< binString.length; i++){
+            bytArr[i] = (byte) Integer.parseInt(binString[i], 2);
+        }
+        return bytArr;
     }
 }

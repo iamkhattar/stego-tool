@@ -9,7 +9,6 @@ public class Driver {
 
         StegoModel model = new StegoModel();
         StegoView view = new StegoView(model);
-
     }
 
 }
