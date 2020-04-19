@@ -1,7 +1,6 @@
 package view;
 
-import controller.encodecontrollers.EncodeModeAlgorithmSelectionListener;
-import controller.encodecontrollers.EncodeModeMenuListener;
+import controller.encodecontrollers.*;
 import model.StegoModel;
 
 import javax.swing.*;
@@ -47,8 +46,11 @@ public class EncodeView extends JPanel implements View {
         JPanel leftPanel = new JPanel();
         leftPanel.setLayout(new GridLayout(3,1));
         JButton sourceButton = new JButton("Choose Source");
+        sourceButton.addActionListener(new EncodeModeSourceButtonListener(model, this));
         JButton payloadButton = new JButton("Choose Payload");
+        payloadButton.addActionListener(new EncodeModePayloadButtonListener(model, this));
         JButton destinationButton = new JButton("Choose Destination");
+        destinationButton.addActionListener(new EncodeModeDestinationListener(model, this));
         leftPanel.add(sourceButton);
         leftPanel.add(payloadButton);
         leftPanel.add(destinationButton);

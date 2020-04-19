@@ -6,13 +6,13 @@ public class StegoModel {
 
     private String source;
     private String destination;
-    private String cover;
+    private String payload;
 
     public StegoModel(String algorithmType){
         this.algorithmType = algorithmType;
         this.source="";
         this.destination="";
-        this.cover="";
+        this.payload="";
     }
 
     public String getAlgorithmType() {
@@ -39,12 +39,12 @@ public class StegoModel {
         this.destination = destination;
     }
 
-    public String getCover() {
-        return cover;
+    public String getPayload() {
+        return payload;
     }
 
-    public void setCover(String cover) {
-        this.cover = cover;
+    public void setPayload(String cover) {
+        this.payload = cover;
     }
 
 }
