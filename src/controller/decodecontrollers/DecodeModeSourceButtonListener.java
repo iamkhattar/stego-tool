@@ -19,11 +19,16 @@ public class DecodeModeSourceButtonListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(panel);
-        File file = chooser.getSelectedFile();
-        String filePath = file.getAbsolutePath();
-        model.setSource(filePath);
-        System.out.println(model.getSource());
+        try{
+            JFileChooser chooser = new JFileChooser();
+            chooser.showOpenDialog(panel);
+            File file = chooser.getSelectedFile();
+            String filePath = file.getAbsolutePath();
+            model.setSource(filePath);
+            System.out.println(model.getSource());
+        }catch (NullPointerException exception){
+            exception.printStackTrace();
+        }
+
     }
 }
