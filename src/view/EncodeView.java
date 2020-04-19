@@ -87,7 +87,7 @@ public class EncodeView extends JPanel implements View {
         JMenu menu = new JMenu("File");
         menuBar.add(menu);
 
-        JMenuItem menuItem = new JMenuItem("Switch to Encode Mode");
+        JMenuItem menuItem = new JMenuItem("Switch to Decode Mode");
         menu.add(menuItem);
         menuItem.addActionListener(new EncodeModeMenuListener(model,view));
 
