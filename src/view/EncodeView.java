@@ -1,5 +1,6 @@
 package view;
 
+import controller.encodecontrollers.EncodeModeAlgorithmSelectionListener;
 import controller.encodecontrollers.EncodeModeMenuListener;
 import model.StegoModel;
 
@@ -64,6 +65,7 @@ public class EncodeView extends JPanel implements View {
         String[] algorithmOptions = {"LSB","BPCS"};
         JComboBox algorithmBox = new JComboBox(algorithmOptions);
         algorithmBox.setSelectedIndex(0);
+        algorithmBox.addItemListener(new EncodeModeAlgorithmSelectionListener(model));
         centerPanel.add(algorithmBox);
         return centerPanel;
     }
