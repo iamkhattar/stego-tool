@@ -8,7 +8,7 @@ public class Write {
 
     /** storing the new image in a new file
      *
-     * @param path the file path for the new image
+     * @param path the file path for new image
      */
     public void write(String path, byte[] stegoImage){
         File f;
