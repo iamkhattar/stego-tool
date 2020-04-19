@@ -5,15 +5,22 @@ import model.StegoModel;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainPanel extends JPanel {
+public class EncodeView extends JPanel implements View {
 
     private StegoModel model;
 
-    public MainPanel(StegoModel model){
+    /**
+     * Encode View for StegoTool
+     * @param model StegoTool model
+     */
+    public EncodeView(StegoModel model){
         this.model = model;
-        buildPanel();
+        this.buildPanel();
     }
 
+    /**
+     * builds Encode Panel
+     */
     private void buildPanel(){
         JPanel mainPanel = new JPanel();
         GridLayout mainPanelLayout = new GridLayout(1,3);
@@ -27,38 +34,55 @@ public class MainPanel extends JPanel {
         this.add(mainPanel);
     }
 
+    /**
+     * builds left hand side panel for the encode view
+     * @return JPanel left hand side panel for encode view
+     */
     private JPanel getLeftPanel(){
         JPanel leftPanel = new JPanel();
-        leftPanel.setLayout(new GridLayout(2,1));
+        leftPanel.setLayout(new GridLayout(3,1));
         JButton sourceButton = new JButton("Choose Source");
+        JButton payloadButton = new JButton("Choose Payload");
         JButton destinationButton = new JButton("Choose Destination");
         leftPanel.add(sourceButton);
+        leftPanel.add(payloadButton);
         leftPanel.add(destinationButton);
         return leftPanel;
     }
 
+    /**
+     * builds center panel for the encode view
+     * @return JPanel center panel for encode view
+     */
     private JPanel getCenterPanel(){
         JPanel centerPanel = new JPanel();
-        centerPanel.setLayout(new GridLayout(2,1));
-
+        centerPanel.setLayout(new GridLayout(1,1));
         String[] algorithmOptions = {"LSB","BPCS"};
         JComboBox algorithmBox = new JComboBox(algorithmOptions);
         algorithmBox.setSelectedIndex(0);
         centerPanel.add(algorithmBox);
-
-        String[] saveOptions = {"Encode","Decode"};
-        JComboBox saveBox = new JComboBox(saveOptions);
-        saveBox.setSelectedIndex(0);
-        centerPanel.add(saveBox);
-
         return centerPanel;
     }
 
+    /**
+     * builds right hand side panel for encode view
+     * @return JPanel right hand side panel for encode view
+     */
     private JPanel getRightPanel(){
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(new GridLayout(1,1));
         JButton goButton = new JButton("Go");
         rightPanel.add(goButton);
         return rightPanel;
+    }
+
+    @Override
+    public JMenuBar getMenuBar() {
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("File");
+        menuBar.add(menu);
+        JMenuItem menuItem = new JMenuItem("Switch to Encode Mode");
+        menu.add(menuItem);
+        return menuBar;
     }
 }
