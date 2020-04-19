@@ -5,7 +5,7 @@ import java.io.*;
 public class Read {
 
 
-    /** reads a file and puts it into an array of bytes
+    /** read a file and puts it into an array of bytes
      *
      * @param path path of the file being read
      * @return returns the file in bytes
