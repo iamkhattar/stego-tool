@@ -2,7 +2,7 @@ package view;
 
 import controller.decodecontrollers.DecodeModeAlgorithmSelectionListener;
 import controller.decodecontrollers.DecodeModeMenuListener;
-import controller.encodecontrollers.EncodeModeMenuListener;
+import controller.decodecontrollers.DecodeModeSourceButtonListener;
 import model.StegoModel;
 
 import javax.swing.*;
@@ -48,6 +48,7 @@ public class DecodeView extends JPanel implements View {
         JPanel leftPanel = new JPanel();
         leftPanel.setLayout(new GridLayout(2,1));
         JButton sourceButton = new JButton("Choose Source");
+        sourceButton.addActionListener(new DecodeModeSourceButtonListener(model,this));
         JButton destinationButton = new JButton("Choose Destination");
         leftPanel.add(sourceButton);
         leftPanel.add(destinationButton);
