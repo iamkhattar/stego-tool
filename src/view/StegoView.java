@@ -16,6 +16,8 @@ public class StegoView extends JFrame {
      */
     public StegoView(StegoModel model){
         this.model = model;
+        ImageIcon icon = new ImageIcon("assets/stegotool-logo.png");
+        this.setIconImage(icon.getImage());
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
