@@ -21,7 +21,7 @@ public class StegoView extends JFrame {
         this.setVisible(true);
         this.setLocationRelativeTo(null);
         this.setLayout(new BorderLayout());
-        currentMode = new DecodeView(model);
+        currentMode = new DecodeView(model,this);
         setFrameToEncodeView();
     }
 
@@ -30,7 +30,7 @@ public class StegoView extends JFrame {
      */
     public void setFrameToDecodeView(){
         this.remove((Component)currentMode);
-        currentMode = new DecodeView(model);
+        currentMode = new DecodeView(model,this);
         this.setTitle("StegoTool - Decode Mode");
         this.add((Component)currentMode,BorderLayout.CENTER);
         this.setJMenuBar(currentMode.getMenuBar());
@@ -42,7 +42,7 @@ public class StegoView extends JFrame {
      */
     public void setFrameToEncodeView(){
         this.remove((Component)currentMode);
-        currentMode = new EncodeView(model);
+        currentMode = new EncodeView(model,this);
         this.setTitle("StegoTool - Encode Mode");
         this.add((Component)currentMode,BorderLayout.CENTER);
         this.setJMenuBar(currentMode.getMenuBar());

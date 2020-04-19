@@ -1,5 +1,6 @@
 package view;
 
+import controller.encodecontrollers.EncodeModeMenuListener;
 import model.StegoModel;
 
 import javax.swing.*;
@@ -8,13 +9,16 @@ import java.awt.*;
 public class EncodeView extends JPanel implements View {
 
     private StegoModel model;
+    private StegoView view;
 
     /**
      * Encode View for StegoTool
      * @param model StegoTool model
+     * @param view StegoTool view
      */
-    public EncodeView(StegoModel model){
+    public EncodeView(StegoModel model, StegoView view){
         this.model = model;
+        this.view = view;
         this.buildPanel();
     }
 
@@ -79,10 +83,14 @@ public class EncodeView extends JPanel implements View {
     @Override
     public JMenuBar getMenuBar() {
         JMenuBar menuBar = new JMenuBar();
+
         JMenu menu = new JMenu("File");
         menuBar.add(menu);
+
         JMenuItem menuItem = new JMenuItem("Switch to Encode Mode");
         menu.add(menuItem);
+        menuItem.addActionListener(new EncodeModeMenuListener(model,view));
+
         return menuBar;
     }
 }
