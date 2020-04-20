@@ -21,7 +21,7 @@ public class DecodeModeDestinationButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try{
             JFileChooser chooser = new JFileChooser();
-            chooser.showOpenDialog(panel);
+            chooser.showSaveDialog(panel);
             File file = chooser.getSelectedFile();
             String filePath = file.getAbsolutePath();
             model.setDestination(filePath);
