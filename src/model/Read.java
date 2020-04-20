@@ -79,4 +79,14 @@ public class Read {
         }
         return bytArr;
     }
+
+    /** Checks to see if a file is a bmp file
+     *
+     * @param extension the file extension being checked
+     * @return returns if the file is a bmp file or not
+     */
+    public boolean isFileBmp(String extension){
+        return getFileExtension(extension).equals("bmp");
+    }
+
 }

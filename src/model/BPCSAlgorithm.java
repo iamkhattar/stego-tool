@@ -13,4 +13,9 @@ public class BPCSAlgorithm implements StegoStrategy {
 
     }
 
+    @Override
+    public boolean isImageSizeSufficient(byte[] cover, byte[] payload) {
+        return false;
+    }
+
 }
