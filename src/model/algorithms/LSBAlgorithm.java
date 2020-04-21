@@ -26,13 +26,13 @@ public class LSBAlgorithm implements StegoStrategy {
 
 
     @Override
-    public void encode() {
+    public boolean encode() {
         byte[] coverBytes = new Read().readFile(coverPath);
         byte[] payloadBytes = new Read().readFile(payloadPath);
         if(isImageSizeSufficient(coverBytes,payloadBytes)){
-            System.out.println("We can encode");
+            return true;
         }else{
-            System.out.println("We cant encode");
+            return false;
         }
     }
 

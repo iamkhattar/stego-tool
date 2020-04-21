@@ -4,8 +4,8 @@ public class BPCSAlgorithm implements StegoStrategy {
 
 
     @Override
-    public void encode() {
-
+    public boolean encode() {
+        return false;
     }
 
     @Override

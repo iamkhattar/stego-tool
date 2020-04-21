@@ -3,9 +3,10 @@ package model.algorithms;
 public interface StegoStrategy {
 
     /**
-     * Allows users to encode using selected algorithm
-      */
-    public void encode();
+     * Allows users to decode using selected algorithm
+     * @return true/false whether encoding is possible or not
+     */
+    public boolean encode();
 
     /**
      * Allows users to decode using selected algorithm
