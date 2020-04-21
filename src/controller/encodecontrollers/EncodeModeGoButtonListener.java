@@ -16,9 +16,15 @@ public class EncodeModeGoButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         //Check for Errors
         String source = model.getSource();
+        String payload = model.getPayload();
+        String destination = model.getPayload();
 
-        if(source==""){
-            System.out.println("Hi");
+        if(source.equals("")){
+            new EncodeErrorController("No Source File Selected");
+        }else if(payload.equals("")){
+            new EncodeErrorController("No Payload File Selected");
+        }else if(destination.equals("")){
+            new EncodeErrorController("No Destination File Selected");
         }else{
             model.encode();
         }
