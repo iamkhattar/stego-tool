@@ -1,4 +1,4 @@
-package model;
+package model.algorithms;
 
 public class LSBAlgorithm implements StegoStrategy {
 
