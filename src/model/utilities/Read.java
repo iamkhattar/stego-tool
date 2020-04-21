@@ -10,7 +10,7 @@ public class Read {
      * @param path path of the file being read
      * @return returns the file in bytes
      */
-    public byte[] read(String path){
+    public byte[] readFile(String path){
         File file = new File(path);
         byte[] b = new byte[(int)file.length()];
 
