@@ -15,7 +15,6 @@ public class StegoModel {
 
     public StegoModel(String algorithmType){
         this.algorithmType = algorithmType;
-        this.setStrategy();
         this.source="";
         this.destination="";
         this.payload="";
@@ -35,7 +34,6 @@ public class StegoModel {
 
     public void setAlgorithmType(String algorithmType) {
         this.algorithmType = algorithmType;
-        this.setStrategy();
     }
 
     public String getSource() {
@@ -63,7 +61,11 @@ public class StegoModel {
     }
 
     public void encode(){
-        strategy.encode();
+        setStrategy();
+        if(!strategy.encode()){
+            //Create Error
+        }
+
     }
 
     public void decode(){

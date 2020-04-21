@@ -14,6 +14,7 @@ public class EncodeModeGoButtonListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Go Pressed");
+        //Check for Errors
+        model.encode();
     }
 }
