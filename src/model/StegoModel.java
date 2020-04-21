@@ -1,5 +1,6 @@
 package model;
 
+import controller.encodecontrollers.EncodeErrorController;
 import model.algorithms.BPCSAlgorithm;
 import model.algorithms.LSBAlgorithm;
 import model.algorithms.StegoStrategy;
@@ -60,11 +61,9 @@ public class StegoModel {
         this.payload = cover;
     }
 
-    public void encode(){
+    public boolean encode(){
         setStrategy();
-        if(!strategy.encode()){
-            //Create Error
-        }
+        return strategy.encode();
 
     }
 

@@ -26,7 +26,11 @@ public class EncodeModeGoButtonListener implements ActionListener {
         }else if(destination.equals("")){
             new EncodeErrorController("No Destination File Selected");
         }else{
-            model.encode();
+            if(model.encode()){
+                new EncodeSuccessController("Payload was hidden successfully");
+            }else{
+                new EncodeErrorController("Cover Image size is insufficient");
+            }
         }
 
 
