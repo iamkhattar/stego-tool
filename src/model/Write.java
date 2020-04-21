@@ -6,8 +6,8 @@ import java.io.OutputStream;
 
 public class Write {
 
-    /** storing the new image in a new file
-     *
+    /**
+     * storing the new image in a new file
      * @param path the file path for new image
      */
     public void write(String path, byte[] stegoImage){
