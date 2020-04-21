@@ -15,6 +15,14 @@ public class EncodeModeGoButtonListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         //Check for Errors
-        model.encode();
+        String source = model.getSource();
+
+        if(source==""){
+            System.out.println("Hi");
+        }else{
+            model.encode();
+        }
+
+
     }
 }
