@@ -68,6 +68,7 @@ public class StegoModel {
     }
 
     public void decode(){
+        setStrategy();
         strategy.decode();
     }
 

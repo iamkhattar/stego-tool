@@ -15,6 +15,6 @@ public class DecodeModeGoButtonListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Decode Go");
+        model.decode();
     }
 }
