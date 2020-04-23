@@ -64,7 +64,7 @@ public class EncodeView extends JPanel implements View {
     private JPanel getCenterPanel(){
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new GridLayout(1,1));
-        String[] algorithmOptions = {"LSB","BPCS"};
+        String[] algorithmOptions = {"LSB"};
         JComboBox algorithmBox = new JComboBox(algorithmOptions);
         algorithmBox.setSelectedIndex(0);
         algorithmBox.addItemListener(new EncodeModeAlgorithmSelectionListener(model));

@@ -1,7 +1,5 @@
 package model;
 
-import controller.encodecontrollers.EncodeErrorController;
-import model.algorithms.BPCSAlgorithm;
 import model.algorithms.LSBAlgorithm;
 import model.algorithms.StegoStrategy;
 
@@ -28,8 +26,6 @@ public class StegoModel {
     public void setStrategy(){
         if(algorithmType.equals("LSB")){
             strategy = new LSBAlgorithm(source,payload,destination);
-        }else{
-            strategy = new BPCSAlgorithm();
         }
     }
 
