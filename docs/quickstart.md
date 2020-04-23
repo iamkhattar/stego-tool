@@ -10,4 +10,4 @@ StegoTool can be obtained by cloning its git repository.
 
 ## StegoTool Production JAR
 
-The StegoTool production JAR can be downloaded [here](../prod/stego-tool.jar).
+The StegoTool production JAR can be downloaded [here](_media/stego-tool.jar).
