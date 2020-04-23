@@ -79,7 +79,7 @@ public class EncodeView extends JPanel implements View {
     private JPanel getRightPanel(){
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(new GridLayout(1,1));
-        JButton goButton = new JButton("Go");
+        JButton goButton = new JButton("Hide Payload");
         rightPanel.add(goButton);
         goButton.addActionListener(new EncodeModeGoButtonListener(model));
         return rightPanel;
