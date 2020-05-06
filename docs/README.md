@@ -14,6 +14,11 @@ StegoTool is a tool that can be used to hide or retrieve a file using the princi
 
 ![StegoTool Encode Mode](_media/stegotool-encodemode.PNG) 
 
+# Technology Stack
+
+<img src="./_media/java.png" height="80" width="80" title="Java"> <img src="./_media/intellij.png" height="80" width="80" title="IntelliJ"> <img src="./_media/git.png" height="80" width="80" title="Git"> <img src="./_media/github.png" height="80" width="80" title="Github">
+
+
 # Contributors
 
 <a href="https://github.com/iamkhattar"><img src="https://avatars3.githubusercontent.com/u/56852615?s=400&u=656d6befdb16f2be60c9c1f80456509a9dde69c4&v=4" title="iamkhattar" width="80" height="80"></a> <a href="https://github.com/Saeedado"><img src="https://avatars2.githubusercontent.com/u/63965340?s=460&v=4" title="Saeedado" width="80" height="80"></a>
