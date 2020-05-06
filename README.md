@@ -18,7 +18,7 @@ Visit our [Documentation Page](https://iamkhattar.github.io/stego-tool/) to view
 
 # Technology Stack
 
-<img src="./assets/java.png" height="50" width="50" alt="Java"> <img src="./assets/intellij.png" height="50" width="50" alt="IntelliJ"> <img src="./assets/git.png" height="50" width="50" alt="Git"> <img src="./assets/github.png" height="50" width="50" alt="Github">
+<img src="./assets/java.png" height="80" width="80" title="Java"> <img src="./assets/intellij.png" height="80" width="80" title="IntelliJ"> <img src="./assets/git.png" height="80" width="80" title="Git"> <img src="./assets/github.png" height="80" width="80" title="Github">
 
 # Contributors
 
